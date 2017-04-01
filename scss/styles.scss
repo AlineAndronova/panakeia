@@ -1,0 +1,354 @@
+@import 'normalize.css';
+@import 'layout';
+
+$primary-font: 'Roboto Slab', Arial, serif;
+$primary-color: #fff;
+$secondary-color: #31353e;
+
+@mixin main-text {
+	font-family: 'Roboto Light', Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.9;
+}
+
+.ba-left {
+	float: left;
+}
+
+.ba-right {
+	float: right;
+}
+
+.ba-button {
+	width: 200px;
+	height: 60px;
+	text-decoration: none;
+	font-family: $primary-font;
+	font-size: 18px;
+	color: #612316;
+	border: 1px, solid, transparent;
+	border-radius: 45px;
+	outline: none;
+	cursor: pointer;
+	transition: .2s ease-in;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.ba-text-wrapper {
+	width: 310px;
+	margin: 0 auto;
+}
+
+.ba-section__title {
+	font-family: $primary-font;
+	font-weight: 700;
+	font-size: 30px;
+	color: $secondary-color;
+	margin-bottom: 80px;
+}
+
+// styles for .ba-header
+
+.ba-header {
+	background-color: #edeff1;
+	padding: 10px;
+}
+
+.ba-logo__image {
+	font-size: 36px;
+	fill: #31353e;
+	text-anchor: middle;
+	font-family: $primary-font;
+	font-weight: 700;
+	width: 160px;
+	height: 40px;
+	margin: 22px;
+}
+
+.ba-navigation__list {
+	list-style-type: none;
+}
+
+.ba-navigation__item {
+	display: inline-block;
+}
+
+.ba-navigation__link {
+	font-family: $primary-font;
+	font-weight: 400;
+	font-size: 18px;
+	color: #31353e;
+	text-decoration: none;
+	display: block;
+	padding: 0 20px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid transparent;
+	border-radius: 50px;
+	transition: .2s ease-in;
+	&:hover {
+		background-color: #dd4b2b;
+		color: #e9cecc;
+	}
+}
+
+// styles for .ba-banner
+
+.ba-banner {
+	padding: 130px 0;
+	text-align: center;
+}
+
+.ba-site-title {
+	font-family: $primary-font;
+	font-weight: 300;
+	font-size: 69px;
+	color: $primary-color;
+	margin: 350px 0 0px;
+}
+
+.ba-site-subtitle {
+	font-family: $primary-font;
+	font-weight: 700;
+	font-size: 32px;
+	color: $primary-color;
+	margin: 0 0 100px;
+}
+
+.ba-block__title {
+	font-family: $primary-font;
+	font-weight: 700;
+	font-size: 30px;
+	color: $primary-color;
+}
+
+.ba-block__description {
+	@include main-text;
+	color: $primary-color;
+}
+
+.ba-button--white {
+	background-color: $primary-color;
+	border-color: $primary-color;
+	margin-top: 70px;
+}
+
+// styles for .ba-news
+
+.ba-news {
+	padding: 50px 0 80px;
+	background-color: #edeff1;
+	text-align: center;
+}
+
+.ba-news__title {
+	font-family: $primary-font;
+	font-weight: 700;
+	font-size: 24px;
+	color: $secondary-color;
+	margin-bottom: 0;
+}
+
+.ba-news__info {
+	@include main-text;
+	color: $secondary-color;
+}
+
+.ba-button--small {
+	width: 180px;
+	height: 50px;
+	background-color: $primary-color;
+	@include main-text;
+	color: #4e5159;
+	outline: none;
+	border: 1px solid $primary-color;
+	transition: .2s ease-in;
+	margin: 15px 0;
+	&:hover{
+		border-color: #4e5159;
+		color: black;
+	}
+}
+
+// styles for .ba-newsletter
+
+.ba-newsletter {
+	padding: 50px;
+	text-align: center;
+}
+
+.ba-section__title--light {
+	color: $primary-color;
+	margin: 30px 0 0;
+}
+
+.ba-text-wrapper--large {
+	width: 535px;
+}
+
+.ba-section__description {
+	@include main-text;
+	color: $primary-color;
+}
+
+.ba-form {
+	width: 510px;
+	height: 55px;
+	margin: 25px auto 70px;
+	position: relative;
+	border-radius: 50px 50px 50px 50px;
+}
+
+input[type=email],
+.ba-form__button {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	outline: none;
+	border: 2px solid $primary-color;
+	background-color: $primary-color;
+	font-family: $primary-font;
+	font-size: 18px;
+	border-radius: 50px 50px 50px 50px;
+}
+
+input[type=email] {
+	width: 80%;
+	left: 0;
+    padding-left: 35px;
+	z-index: 5;
+	border-color: rgba(255,255,255,0.2);
+	background-color: rgba(255,255,255,0.2);
+}
+
+input[type=email]::-webkit-input-placeholder {
+	color: $primary-color;
+}
+
+input[type=email]::-moz-placeholder {
+	color: $primary-color;
+}
+
+input[type=email]:-moz-placeholder {
+	color: $primary-color;
+}
+
+input[type=email]:-ms-input-placeholder {
+	color: $primary-color;
+}
+
+input[type=email]:-moz-placeholder {
+    text-indent: 0;
+    transition: text-indent .2s ease-in-out;
+}
+
+input[type=email]::-moz-placeholder {
+    text-indent: 0;
+    transition: text-indent .2s ease-in-out;
+}
+
+input[type=email]:-ms-input-placeholder {
+    text-indent: 0;
+    transition: text-indent .2s ease-in-out;
+}
+
+input[type=email]::-webkit-input-placeholder {
+    text-indent: 0;
+    transition: text-indent .2s ease-in-out;
+}
+
+input:focus:-moz-placeholder {
+    text-indent: 100%;
+}
+input:focus::-moz-placeholder {
+    text-indent: 100%;
+}
+input:focus:-ms-input-placeholder {
+    text-indent: 100%;
+}
+input:focus::-webkit-input-placeholder {
+    text-indent: 100%;
+}
+
+input.clicked:invalid {
+ border-color: red;
+}
+
+input.clicked:valid {
+ border-color: green;
+}
+
+.ba-form__button {
+	width: 40%;
+	right: 0;
+	color: #612316;
+	z-index: 10;
+	cursor: pointer;
+	transition: .2s ease-in;
+	&:hover {
+		border: 2px solid #612316;
+	}
+}
+
+
+//styles for .ba-sign-up
+
+.ba-sign-up {
+	padding: 70px 0 90px;
+}
+
+.ba-article {
+	width: 550px;
+	height: 300px;
+}
+
+.ba-article__title {
+	font-family: $primary-font;
+	font-size: 30px;
+	color: $secondary-color;
+}
+
+.ba-article__description {
+	line-height: 1.9;
+	color: $secondary-color;
+	font-family: 'Roboto Leight', sans-serif;
+}
+
+.ba-article__image {
+	width: 550px;
+	height: 410px;
+	border: 1px solid #grey;
+}
+
+.ba-button--red,
+.ba-button--blue {
+	color: $primary-color;
+	height: 50px;
+	border: none;
+}
+
+.ba-button--red {
+	background-color: #dd4b2b;
+}
+
+.ba-button--blue {
+	background-color: #4b4e73;
+}
+
+ // .ba-footer
+
+ .ba-footer {
+ 	padding: 20px 0;
+ 	background-color: #d75d0e;
+ 	text-align: center;
+ }
+
+.ba-footer__text-wrapper {
+	width: 169px;
+	font-family: 'Roboto Regular', sans-serif;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.9;
+}
